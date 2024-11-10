@@ -12,111 +12,117 @@
 <body>
         <nav> 
              <a href="#home">Home</a>
-             <a href="#about">About</a>
+             <a href="#about-section">About Me</a>
              <a href="#projects">Projects</a>
              <a href="#contact">Contact</a>
         </nav>
     </div>
     <br>
+    <header id="start">
     <div class="container">
         <div class="left-square">
-             <img src="img/rdesginslogo.png" alt="design logo">
-             <button>WORK WITH ME</button>
+             <img src="img/logo.jpg" alt="design logo">
         </div>
         <div class="right-square">
             <div class="gallery">
-                <img src="img/pic1.jpg" alt="Gallery Image 1">
-                <img src="img/pic2.jpg" alt="Gallery Image 2">
-                <img src="img/pic3.jpg" alt="Gallery Image 3">
-                <img src="img/pic4.jpg" alt="Gallery Image 4">
-                <img src="img/pic5.jpg" alt="Gallery Image 5">
-                <img src="img/pic6.jpg" alt="Gallery Image 6">
+                <img src="img/brandpic.jpg" alt="Gallery Image 1">
+                <img src="img/webpic.jpg" alt="Gallery Image 2">
+                <img src="img/designpic.jpg" alt="Gallery Image 3">
+                <img src="img/photographypic.jpg" alt="Gallery Image 4">
             </div>
         </div>
     </div>
+  </header>
     <br>
-    <div class="intro-section">
-        <h1>Artistry in Design, Elegance in Execution</h1>
-        <p>As a graphic designer specializing in branding and illustration,
+    <div class="about-section" id="about-section">
+        <div class="left">
+          <h1>About Me</h1>
+          <p>As a graphic designer specializing in branding and illustration,
             I am dedicated to crafting minimalist yet vibrant designs that exude sophistication. 
             My expertise lies in elevating the visual identities of businesses in fashion, e-commerce, 
             entertainment, and non-profits, helping them cultivate a distinctive presence in their markets. 
             My mission is to provide creative solutions that harmoniously blend elegance with functionality, 
             empowering clients to stand out with grace and style in their industries.
         </p>
-    </div>
-
-    <div class="content-section">
-        <!-- Branding Block -->
-        <div class="content-block">
-            <div class="image-content">
-                <img src="img/brand.jpg" alt="Branding">
-            </div>
-            <div class="text-content">
-                <h2>Branding</h2>
-                <p>blah blah</p>
-            </div>
         </div>
-    
-        <!-- Design Block -->
-        <div class="content-block">
-            <div class="text-content">
-                <h2>Design</h2>
-                <p>blah</p>
-            </div>
-            <div class="image-content">
-                <img src="img/design.jpg" alt="Design">
-            </div>
+        <div class="right">
+          <h2>Software Tools</h2>
+          <div class="icon-grid">
+            <img src="img/ps.png" alt="Software 1">
+            <img src="img/ai.png" alt="Software 2">
+            <img src="img/id.png" alt="Software 3">
+            <img src="img/ae.png" alt="Software 4">
+            <img src="img/pr.png" alt="Software 5">
+          </div>
         </div>
-    
-        <!-- Photography Block -->
-        <div class="content-block">
-            <div class="image-content">
-                <img src="img/photography.jpg" alt="Photography">
-            </div>
-            <div class="text-content">
-                <h2>Photography</h2>
-                <p>blah blah</p>
-            </div>
+      </div>
+    <br>
+    <section id="projects" class="work">
+        <h3 class="reveal">Projects</h3>
+        <h4>Here are a few of my graphic design projects.</h4>
+
+        <div class="slider">
+          <div class="slide-track">
+            <a href="kopikat/index.html">
+              <div class="boxes a"><span>Powerspice Girls Trading Cards</span></div>
+            </a>
+            <a href="madame-poule/index.html">
+              <div class="boxes b"><span>DAME Magazine Cover</span></div>
+            </a>
+            <a href="eerie-nostalgia/index.html">
+              <div class="boxes c"><span>Ruby Waters Album Cover</span></div>
+            </a>
+            <a href="case-study/index.html">
+              <div class="boxes d"><span>Wine Logo</span></div>
+            </a>
+
+            <!-- DOUBLE -->
+
+            <a href="kopikat/index.html">
+              <div class="boxes a"><span>Powerspice Girls Trading Cards</span></div>
+            </a>
+            <a href="madame-poule/index.html">
+              <div class="boxes b"><span>DAME Magazine Cover</span></div>
+            </a>
+            <a href="#">
+              <div class="boxes c"><span>Ruby Waters Album Cover</span></div>
+            </a>
+            <a href="#">
+              <div class="boxes d"><span>Wine Logo</span></div>
+            </a>
+          </div>
         </div>
-    
-        <!-- Web Design Block -->
-        <div class="content-block">
-            <div class="text-content">
-                <h2>Web Designs</h2>
-                <p>blah</p>
-            </div>
-            <div class="image-content">
-                <img src="img/web.jpeg" alt="Web">
-            </div>
-        </div>
-    </div>
-       
-        <button id="scrollToTop" class="scroll-to-top">
-        &#8593;
-    </button>
-
-    <script>
-        const scrollToTopBtn = document.getElementById('scrollToTop');
-
-        window.onscroll = function() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollToTopBtn.style.display = 'block';
-            } else {
-                scrollToTopBtn.style.display = 'none';
-            }
-        };
-
-        scrollToTopBtn.onclick = function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        };
-    </script>
+        <!-- <div class="button"><a href="">See More</a></div> -->
+      </section>
+      
 </body>
 <footer>
+  <div class="socials">
+        <img src="img/instaicon.png" alt="instagram">
+        <img src="img/indeedicon.png" alt="indeed">
+        <img src="img/behanceicon.png" alt="behance">
+    </div>
+    <p style="text-align: right;"><a href="#start" class="up-btn">top&mapstoup;</a></p>
     <p style="margin-bottom: 24px;" class="pflip">Copyright &copy; <script>document.write(new Date().getFullYear())</script> | <span class="hilight">
         <a href="https://rifah28.412micromedia.com/web5/portfolioweb/portfolioweb.html" target="_blank">Rifah Sohel</a></span></p>
 </footer>
 </html>
+
+<script>
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    };
+
+    scrollToTopBtn.onclick = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+</script>
