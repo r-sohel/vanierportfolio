@@ -1,3 +1,8 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     background-color: #000000; /* Website background color */
     font-family: "Gowun Dodum", sans-serif;
@@ -32,6 +37,8 @@ nav a{
 nav a:hover {
   color: #aacc83;
 }
+
+
 .container {
   display: flex;
   height: calc(100vh - 65px); 
@@ -52,28 +59,11 @@ nav a:hover {
 }
 
 .left-square {
-  background-color: #f8f8f8;
-  color: rgb(0, 0, 0);
-}
-
-.left-square button {
-  position: absolute;
-  bottom: 140px; 
-  left: 23%;
-  transform: translateX(-50%);
-  padding: 1em 1em;
-  background-color: #1c421e;
-  border: none;
-  color: white;
-  font-family: "Gowun Dodum", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-  cursor: pointer;
-  margin-top: 1em;
+  background-color: #000000;
 }
 
 .right-square {
-  background-color: #ffffff;
+  background-color: #000000;
   overflow: hidden;
   position: relative;
 }
@@ -98,8 +88,6 @@ nav a:hover {
 .gallery img:nth-child(2) { animation-delay: 4s; }
 .gallery img:nth-child(3) { animation-delay: 8s; }
 .gallery img:nth-child(4) { animation-delay: 12s; }
-.gallery img:nth-child(5) { animation-delay: 16s; }
-.gallery img:nth-child(6) { animation-delay: 20s; }
 
 @keyframes slide {
   0% { opacity: 0; }
@@ -109,90 +97,148 @@ nav a:hover {
   100% { opacity: 0; }
 }
 
-.intro-section {
-  background-color: #f8f8f8;
-  text-align: center;
-  padding: 2rem 3rem;
-  margin-bottom: 2rem;
-}
-
-.intro-section h1 {
-  font-size: 1.8em;
-  color: #002d00;
-  margin-bottom: 0.5rem;
-}
-
-.intro-section p {
-  font-size: 1em;
-  color: #000000;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-
-.content-section {
+.about-section {
   display: flex;
-  flex-direction: column;
-  gap: 2rem; 
-  padding: 0; 
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  color: #efefef; 
+  font-size: 1.5rem;
 }
 
-.content-block {
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 1;
+}
+
+h1 {
+  font-size: 2.5rem; 
+  color: #ffffff; 
+  margin-bottom: 1rem; 
+  font-weight: bold;
+  text-align: left; 
+}
+
+h2 {
+  font-size: 2.5rem; 
+  color: #ffffff; 
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: left; 
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1rem;
+  grid-auto-flow: dense;
+}
+
+.icon-grid img {
+  width: 100px; /* Adjust icon size as needed */
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Adjust grid items for the row of 3 followed by a row of 2 */
+.icon-grid img:nth-child(4),
+.icon-grid img:nth-child(5) {
+  grid-column: span 1; /* Place these in the second row */
+}
+
+/* WORK */
+
+.work {
+  display: grid;
+  place-items: center;
+}
+
+.work h3 {
+  font-size: 3rem;
+  color: #f8f8f8;
+  margin: 1rem 0;
+}
+
+.work h4 {
+  margin: 1rem 2rem;
+}
+.slider {
+  padding-bottom: 80px;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(400px * 8); /* Adjust based on number of items */
+  animation: scroll 20s linear infinite;
+}
+
+.slide-track a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Box styles */
+.boxes {
+  height: 400px;
+  width: 400px;
   display: flex;
   align-items: center;
-  padding: 1.5rem;
-  background-color: #f8f8f8;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-  width: 100%; 
-  max-width: none; 
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background for images */
+  margin: 10px;
+  position: relative; /* Needed for the text overlay */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transition effects */
 }
 
-.content-block:nth-child(odd) {
-  justify-content: flex-start; 
+/* Hover effect: Scale the box and apply color change */
+.boxes:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  filter: brightness(0.7) saturate(1.5); /* Change brightness and saturation on hover */
 }
 
-.content-block:nth-child(even) {
-  justify-content: flex-end; 
+/* Text Overlay */
+.boxes span {
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0; /* Initially hide the text */
+  visibility: hidden; /* Ensure it's not clickable or visible */
+  transition: opacity 0.3s ease, visibility 0s ease 0.3s; /* Delay visibility change */
+  background-color: rgba(0, 0, 0, 0.6); /* Dark background for text */
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
-
-.text-content {
-  max-width: 300px;
-  margin: 0 1rem; 
+/* Make text visible when hovering over the box */
+.boxes:hover span {
+  opacity: 1; /* Make text visible on hover */
+  visibility: visible; /* Make sure the text overlay is visible */
+  transition: opacity 0.3s ease; /* Smooth transition */
 }
 
-.content-block:nth-child(odd) .text-content {
-  text-align: right;
+/* Keyframes for continuous scrolling */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-.content-block:nth-child(even) .text-content {
-  text-align: left;
-}
+.a { background-image: url('../img/powerpuff_cards.jpg'); }
+.b { background-image: url('../img/DAMEmagcover.jpg'); }
+.c { background-image: url('../img/watersalbum.jpg'); }
+.d { background-image: url('../img/wine_bottle2.jpg'); }
 
-
-.text-content h2 {
-  font-size: 1.5em;
-  color: #002d00;
-}
-
-.content-block:nth-child(odd) .text-content h2 {
-  text-align: right;
-}
-
-.content-block:nth-child(even) .text-content h2 {
-  text-align: left;
-}
-
-.image-content img {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-}
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
@@ -213,11 +259,39 @@ nav a:hover {
 
 footer {
   background: rgb(0, 0, 0);
-  color: #ffffff;
   text-align: center;
-  padding: 0.5em;
+  padding: 2em;
   position: relative;
 }
 
+.pflip {
+  color: #efefef;
+}
+
+.hilight {
+  color: rgb(213, 206, 187);
+}
+
+footer a {
+  color: rgb(213, 206, 187);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.socials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1rem;
+  grid-auto-flow: dense;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials img {
+  width: 100px; /* Adjust icon size as needed */
+  height: 100px;
+  object-fit: contain;
+}
 
 
