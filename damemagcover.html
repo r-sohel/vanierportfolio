@@ -1,0 +1,137 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAME Magazine Cover</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/project.css'> 
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/century-schoolbook" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+  <body>
+    <header>
+        <nav> 
+            <!-- Hamburger icon -->
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <!-- Navigation links -->
+            <div class="nav-links" id="nav-links">
+                <a href="../portfolioweb.html">Home</a>
+                <a href="https://rifah28.412micromedia.com/web5/portfolioweb/portfolioweb.html#about-section">About Me</a>
+                <a href="../projectpagelayout.html">Projects</a>
+                <a href="../contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+      <section class="work">
+        <div class="work-info">
+          <div>
+            <h2>DAME Magazine Cover</h2>
+            <div class="overview">
+              <div class="overview-container">
+                <h3>Assignment</h3>
+                <p>Magazine Cover Layout</p>
+                <div class="line"></div>
+              </div>
+              <div class="overview-container">
+                <h3>Tools Used</h3>
+                <p>Indesign</p>
+                <div class="line hide"></div>
+              </div>
+              <div class="overview-container">
+                <h3>Year</h3>
+                <p>2024</p>
+                <div class="line hide"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p>
+                I had to create a magazine layoutfor a publication and design a sample cover 
+                It had to include publication name, masthead (wordmark), cover image, dateline and coverlines, plugs, etc. keeping 
+                note of how all visual elements work in harmony with each other as well as the established brand.
+            </p>
+            <p>
+                The magazine cover I designed targets modern, fashion-conscious women who are passionate about high-end fashion, 
+                beauty, and culture. These readers are likely professionals or trendsetters seeking the latest runway trends, 
+                elegant style guides, and beauty tips. 
+                <br>
+                <br>
+                The choice of bold yet refined typography, combined with a sophisticated 
+                color palette, speaks directly to the target audience’s desire for a luxurious and exclusive experience. 
+                The cover emphasizes elegance and innovation, reflecting the magazine’s focus on haute couture makeup techniques 
+                and exclusive industry insights. By incorporating elements of runway fashion, exclusive interviews, and royal collections, 
+                the design aligns with the aspirational and high-fashion voice of the publication, ensuring it resonates with the 
+                target audience.
+              </p>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <div class="line"></div>
+          <img class="reveal" src="../img/damemagcover1.jpg" alt="" />
+          <img class="reveal" src="../img/damemagcover2.jpg" alt="" />
+          <div class="line"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="socials">
+        <!-- Instagram Link -->
+        <a href="https://www.instagram.com/designs_by_riri/" target="_blank">
+          <img src="../img/instaicon.png" alt="Instagram">
+        </a>
+        
+        <!-- LinkedIn Link -->
+        <a href="https://www.linkedin.com/in/rifahsohel/" target="_blank">
+          <img src="../img/linkedinicon.png" alt="LinkedIn">
+        </a>
+        
+        <!-- Behance Link -->
+        <a href="https://www.behance.net/rifahsohel1" target="_blank">
+          <img src="../img/behanceicon.png" alt="Behance">
+        </a>
+      </div>
+      <p style="text-align: right;">
+        <a href="#start" class="up-btn">top&mapstoup;</a>
+      </p>
+      <p style="margin-bottom: 24px;" class="pflip">
+        Copyright &copy; <script>document.write(new Date().getFullYear())</script> | <span class="hilight">
+          <a href="https://rifah28.412micromedia.com/web5/portfolioweb/portfolioweb.html" target="_blank">Rifah Sohel</a>
+        </span>
+      </p>
+    </footer>
+      </html>
+    </body>
+    
+    <script>
+    
+    window.addEventListener('scroll', reveal);
+
+    function reveal() {
+     var reveals = document.querySelectorAll('.reveal');
+   
+     for(var i = 0; i < reveals.length; i++){
+   
+       var windowheight = window.innerHeight;
+       var revealtop = reveals[i].getBoundingClientRect().top;
+       var revealpoint = 150;
+   
+       if(revealtop < windowheight - revealpoint){
+         reveals[i].classList.add('active');
+       }
+       else{
+         reveals[i].classList.remove('active');
+       }
+        }
+     }</script>
+  
+</html>
