@@ -1,0 +1,121 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics by Rifah Projects</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/projectpagelayout.css'> 
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/century-schoolbook" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav> 
+    <!-- Hamburger icon -->
+    <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <!-- Navigation links -->
+    <div class="nav-links" id="nav-links">
+        <a href="portfolioweb.html">Home</a>
+        <a href="https://rifah28.412micromedia.com/web5/portfolioweb/portfolioweb.html#about-section">About Me</a>
+        <a href="projectpagelayout.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+    </header>
+    <h1>Discover my work...</h1>
+    <p id="workP">Works</p>
+    <main id="works">
+        <div id="work">
+            <a href="../portfolioweb/projects/damemagcover.html" target="_blank">
+                <img src="../portfolioweb/img/damemagcover1.jpg" alt="DAME magazine Cover Layout">
+            </a>
+            <a href="../portfolioweb/projects/winebottle.html" target="_blank">
+                <img src="../portfolioweb/img/wine_bottle2.jpg" alt="Saint-Pierre Le Vignoble Label Design">
+            </a>
+            <a href="../portfolioweb/projects/tradingcards.html" target="_blank">
+                <img src="../portfolioweb/img/powerpuff_cards.jpg" alt="Powerspice Girls Trading Cards">
+            </a>
+            <a href="../portfolioweb/projects/rubywaters.html" target="_blank">
+                <img src="../portfolioweb/img/front&back.jpg" alt="Ruby Waters Album Cover">
+            </a>
+            <a href="../portfolioweb/projects/newyorkmontage.html" target="_blank">
+                <img src="../portfolioweb/img/nythumbnail.jpg" alt="New York Montage">
+            </a>
+        </a>
+        <a href="../portfolioweb/projects/fijiwaterad.html" target="_blank">
+            <img src="../portfolioweb/img/fwthumbnail.jpg" alt="Fiji Water Ad">
+        </a>
+        <a href="../portfolioweb/projects/bookjacket.html" target="_blank">
+            <img src="../portfolioweb/img/thenightcircus_cover.jpg" alt="Book Dusk Jackets">
+        </a>
+        <a href="../portfolioweb/projects/plateproject.html" target="_blank">
+            <img src="../portfolioweb/img/platemockupv1.jpg" alt="PLate Designs">
+        </a>
+        <a href="../portfolioweb/projects/lookalike.html" target="_blank">
+            <img src="../portfolioweb/img/lookalikethumbnail.jpg" alt="Look-a-like">
+        </a>
+        <a href="../portfolioweb/projects/chaibooklet.html" target="_blank">
+            <img src="../portfolioweb/img/chaibooklet1.jpg" alt="Chai Booklet">
+            </a>
+         <a href="../portfolioweb/projects/nomoreposter.html" target="_blank">
+                <img src="../portfolioweb/img/nomoreposter2.jpg" alt="Social Justice Poster">
+                </a>
+         <a href="../portfolioweb/projects/juicebox.html" target="_blank">
+             <img src="../portfolioweb/img/juicebox3.jpg" alt="Social Justice Poster">
+                 </a>
+        </div>
+    </main>
+      
+    <footer>
+            <div class="socials">
+              <a href="https://www.instagram.com/designs_by_riri/" target="_blank">
+                <img src="../portfolioweb/img/instaicon.png" alt="Instagram">
+              </a>
+                <a href="https://www.linkedin.com/in/rifahsohel/" target="_blank">
+                <img src="../portfolioweb/img/linkedinicon.png" alt="linkedin">
+              </a>
+                <a href="https://www.behance.net/rifahsohel1" target="_blank">
+                  <img src="img/behanceicon.png" alt="Behance">
+              </a>
+              </div>
+              <p style="text-align: right;"><a href="#start" class="up-btn">top&mapstoup;</a></p>
+              <p style="margin-bottom: 24px;" class="pflip">Copyright &copy; <script>document.write(new Date().getFullYear())</script> | <span class="hilight">
+                  <a href="https://rifah28.412micromedia.com/web5/portfolioweb/portfolioweb.html" target="_blank">Rifah Sohel</a></span></p>
+          </footer>
+          </html>
+          
+          <script>
+           const scrollToTopBtn = document.getElementById('scrollToTop');
+          
+          if (scrollToTopBtn) {
+            window.onscroll = function() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    scrollToTopBtn.style.display = 'block';
+                } else {
+                    scrollToTopBtn.style.display = 'none';
+                }
+            };
+          
+            scrollToTopBtn.onclick = function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+          }
+          }
+          
+          // Hamburger menu functionality
+          const hamburger = document.getElementById('hamburger');
+          const navLinks = document.getElementById('nav-links');
+          
+          // Ensure hamburger and navLinks exist before adding event listener
+          if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+              navLinks.classList.toggle('active');
+            });
+          }
+          </script>
