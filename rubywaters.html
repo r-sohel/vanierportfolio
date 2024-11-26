@@ -1,0 +1,149 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Waters Album</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/project.css'> 
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/century-schoolbook" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+
+  <body>
+    <header>
+        <nav> 
+            <!-- Hamburger icon -->
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <!-- Navigation links -->
+            <div class="nav-links" id="nav-links">
+                <a href="../portfolioweb.html">Home</a>
+                <a href="https://rifah28.412micromedia.com/web5/portfolioweb/portfolioweb.html#about-section">About Me</a>
+                <a href="../projectpagelayout.html">Projects</a>
+                <a href="../contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+      <section class="work">
+        <div class="work-info">
+          <div>
+            <h2>Ruby Waters Album Cover</h2>
+            <div class="overview">
+              <div class="overview-container">
+                <h3>Assignment</h3>
+                <p>CD Cover Booklet</p>
+                <div class="line"></div>
+              </div>
+              <div class="overview-container">
+                <h3>Tools Used</h3>
+                <p>Photoshop. Illustrator & Indesign</p>
+                <div class="line hide"></div>
+              </div>
+              <div class="overview-container">
+                <h3>Year</h3>
+                <p>2023</p>
+                <div class="line hide"></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p>
+              This assignment's requirement was to find a musician / artist that I liked and find 3 - 5  
+              of their songs to include in my original design of a CD booklet with lyrics for a Single or EP*
+            </p>
+            <p>
+              *An EP (Extended Play) refers to a half-length body of work,  features between 4-6 tracks and has a running time of roughly 15-22 mins (but can be up to 30 minutes). 
+              A single is the shortest body of work you can release, features between 1-3 tracks and has a running time of roughly less than 10 mins.
+              </p> 
+              <p>
+          Pages:
+          </p> 
+          <p>
+          1 main cover : artist logo, Title of the Single/EP, artwork and/or Band photography
+          2 - 3 (inside spread) : Lyrics,  photos and/or artwork ...
+          4 back of booklet : Song credits, track list, artwork credits & legal info PLUS artwork and/or photography
+        </p> 
+        <p>
+          I had to create a final PDF for both print (via Indesign) and digital contribution.
+          </p>
+          <p>
+          I kept the PSD file for an additional part 2 of this project which was to animate the CD Cover using Photoshop's Timeline
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <div class="line"></div>
+          <img class="reveal" src="../img/sweetsublime.jpg" alt="" />
+          <img class="reveal" src="../img/good recipe.jpg" alt="" />
+          <img class="reveal" src="../img/quantumphysics.jpg" alt="" />
+          <img class="reveal" src="../img/front&back.jpg" alt="" />
+          <div class="line"></div>
+        </div>
+
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Ao4M01KRIHU" 
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen></iframe>
+      </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="socials">
+        <!-- Instagram Link -->
+        <a href="https://www.instagram.com/designs_by_riri/" target="_blank">
+          <img src="../img/instaicon.png" alt="Instagram">
+        </a>
+        
+        <!-- LinkedIn Link -->
+        <a href="https://www.linkedin.com/in/rifahsohel/" target="_blank">
+          <img src="../img/linkedinicon.png" alt="LinkedIn">
+        </a>
+        
+        <!-- Behance Link -->
+        <a href="https://www.behance.net/rifahsohel1" target="_blank">
+          <img src="../img/behanceicon.png" alt="Behance">
+        </a>
+      </div>
+      <p style="text-align: right;">
+        <a href="#start" class="up-btn">top&mapstoup;</a>
+      </p>
+      <p style="margin-bottom: 24px;" class="pflip">
+        Copyright &copy; <script>document.write(new Date().getFullYear())</script> | <span class="hilight">
+          <a href="https://rifah28.412micromedia.com/web5/portfolioweb/portfolioweb.html" target="_blank">Rifah Sohel</a>
+        </span>
+      </p>
+    </footer>
+      </html>
+    </body>
+    
+    <script>
+    
+    window.addEventListener('scroll', reveal);
+
+    function reveal() {
+     var reveals = document.querySelectorAll('.reveal');
+   
+     for(var i = 0; i < reveals.length; i++){
+   
+       var windowheight = window.innerHeight;
+       var revealtop = reveals[i].getBoundingClientRect().top;
+       var revealpoint = 150;
+   
+       if(revealtop < windowheight - revealpoint){
+         reveals[i].classList.add('active');
+       }
+       else{
+         reveals[i].classList.remove('active');
+       }
+        }
+     }</script>
+  
+</html>
