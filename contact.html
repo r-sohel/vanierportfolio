@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact for Graphics by Rifah</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/contact.css'> 
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/century-schoolbook" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav> 
+    <!-- Hamburger icon -->
+    <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <!-- Navigation links -->
+    <div class="nav-links" id="nav-links">
+        <a href="portfolioweb.html">Home</a>
+        <a href="#about-section">About Me</a>
+        <a href="projectpagelayout.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="contact-container">
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>r_designs@gmail.com</p>
+        <p>Montreal, Quebec</p>
+    </div>
+    <div class="socials">
+        <a href="https://www.instagram.com/designs_by_riri/" target="_blank">
+            <img src="../portfolioweb/img/instaicon.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/rifahsohel/" target="_blank">
+            <img src="../portfolioweb/img/linkedinicon.png" alt="LinkedIn">
+        </a>
+        <a href="https://www.behance.net/rifahsohel1" target="_blank">
+            <img src="../portfolioweb/img/behanceicon.png" alt="Behance">
+        </a>
+    </div>
+  </div>
+
+  <footer>
+      <p style="margin-bottom: 24px;" class="pflip">
+          Copyright &copy; <script>document.write(new Date().getFullYear())</script> | <span class="hilight">
+              <a href="https://rifah28.412micromedia.com/web5/portfolioweb/portfolioweb.html" target="_blank">Rifah Sohel</a></span>
+      </p>
+  </footer>
+
+  <script>
+    // Hamburger menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    
+    // Ensure hamburger and navLinks exist before adding event listener
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
